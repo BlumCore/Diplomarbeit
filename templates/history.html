@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{%block content%} 
+
+    <div class="container">
+        <div class="gyro">
+            <div class="gyro__x">
+                <h1>Gyro Data X</h1>
+                <ul>
+                    <li>{{ item["device_data"]["xacc"]}}</li>
+                    {% for d in old %}
+                        <li>{{ d['device_data']['xacc'] }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="gyro__y">
+                <h1>Gyro Data Y</h1>
+                <ul>
+                    <li>{{ item["device_data"]["yacc"]}}</li>
+                    {% for d in old %}
+                        <li>{{ d['device_data']['yacc'] }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="heart">
+           <img class="heart__icon" src="{{url_for('.static', filename='heart.png')}}"/>
+           <div class="heart__Label"></div>
+        </div>
+    </div>
+{% endblock %}

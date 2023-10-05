@@ -1,0 +1,26 @@
+.nav__ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 10%;
+    max-height: 100px;
+  }
+  
+.nav__li {
+    display: inline;
+}
+
+.nav__li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+body {margin:0;}
