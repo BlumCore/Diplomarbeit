@@ -3,23 +3,25 @@
 
     <div class="container">
         <div class="gyro">
-            <div class="gyro__x">
-                <h1>Gyro Data X</h1>
-                <ul>
-                    <li>{{ item["device_data"]["xacc"]}}</li>
+            <div class="">
+                <h1>Gyro Data</h1>
+                <table>
+                    <tr>
+                    <th>X</th>
+                    <th>Y</th>
+                    </tr>
+                    <tr>
+                        <td>{{ item["device_data"]["xacc"]}}</td>
+                        <td>{{ item["device_data"]["yacc"]}}</td>
+                    </tr>
                     {% for d in old %}
-                        <li>{{ d['device_data']['xacc'] }}</li>
+                    <tr>
+                        <td>{{ d['device_data']['xacc'] }}</td>
+                        <td>{{ d['device_data']['yacc'] }}</td>
+                    </tr>
                     {% endfor %}
-                </ul>
-            </div>
-            <div class="gyro__y">
-                <h1>Gyro Data Y</h1>
-                <ul>
-                    <li>{{ item["device_data"]["yacc"]}}</li>
-                    {% for d in old %}
-                        <li>{{ d['device_data']['yacc'] }}</li>
-                    {% endfor %}
-                </ul>
+
+                </table>
             </div>
         </div>
         <div class="heart">
