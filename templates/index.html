@@ -3,13 +3,13 @@
     <div class="container">
         <div class="gyro">
             <div class="axis" id="axis_x-3">
-                <div class="dot" style="--x: {{ item['device_data']['xacc']}}; --y: {{ item['device_data']['yacc']}};">
+                <div id="dot" class="dot" style="--x: {{ item['device_data']['xacc']}}; --y: {{ item['device_data']['yacc']}};">
                 </div>
             </div>
         </div>
         <div class="heart">
            <img class="heart__icon" src="{{url_for('.static', filename='heart.png')}}"/>
-           <div class="heart__Label"> {{ item['device_data']['heartrate']}}</div>
+           <div class="heart__Label" id="heart"> {{ item['device_data']['heartrate']}}</div>
         </div>
     </div>
     <script src="{{url_for('.static', filename='live.js')}}">  </script>
