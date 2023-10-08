@@ -2,7 +2,7 @@
 {%block content%} 
 
     <div class="container">
-        <div class="gyro">
+        <div class="gyro_x">
             <div class="">
                 <h1>Gyro Data</h1>
                 <table>
@@ -10,12 +10,12 @@
                     <th>X</th>
                     <th>Y</th>
                     </tr>
-                    <tr>
+                    <tr class="clickable-row">
                         <td>{{ item["device_data"]["xacc"]}}</td>
                         <td>{{ item["device_data"]["yacc"]}}</td>
                     </tr>
                     {% for d in old %}
-                    <tr>
+                    <tr class="clickable-row">
                         <td>{{ d['device_data']['xacc'] }}</td>
                         <td>{{ d['device_data']['yacc'] }}</td>
                     </tr>
@@ -23,10 +23,15 @@
 
                 </table>
             </div>
+            <div class="axis" id="axis_x-3">
+                <div id="dot" class="dot">
+                </div>
+            </div>
         </div>
         <div class="heart">
            <img class="heart__icon" src="{{url_for('.static', filename='heart.png')}}"/>
            <div class="heart__Label"></div>
         </div>
     </div>
+    <script src="{{url_for('.static', filename='history.js')}}">  </script>
 {% endblock %}
