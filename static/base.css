@@ -11,6 +11,7 @@
     overflow: hidden;
     height: 10%;
     max-height: 100px;
+    z-index: 3;
   }
   
 .nav__li {
