@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from datetime import datetime
 import boto3
 from boto3.dynamodb.conditions import Key
 
@@ -8,7 +9,9 @@ app = Flask(__name__,  template_folder='templates')
 def index():
     item = getItem()
     lastimes = getLastItems()
-    return render_template("index.html", item=item, old=lastimes)
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    return render_template("index.html", item=item, old=lastimes, time=current_time)
 
 @app.route('/history')
 def history():

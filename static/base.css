@@ -1,13 +1,15 @@
-.nav__ul {
+nav{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+}
+.nav__ul {
     align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: blue;
-    position: fixed;
     top: 0;
-    width: 100%;
     overflow: hidden;
     height: 10%;
     max-height: 100px;
@@ -23,5 +25,8 @@
     text-decoration: none;
     padding: 14px 16px;
     text-decoration: none;
+}
+.logo{
+    max-height: 80px;
 }
 body {margin:0;}

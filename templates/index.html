@@ -1,7 +1,13 @@
 {% extends "base.html" %}
 {%block content%} 
-    <div class="container">            
-        <h1>Live Data</h1>
+    <div class="container">        
+        <div class="datatable">
+            <h1>Live Data</h1>
+            <div id="time" class="time">
+                {{time}}
+            </div>
+        </div>    
+        
         <div class="gyro">
             <div class="axis" id="axis_x-3">
                 <div id="dot" class="dot" style="--x: {{ item['device_data']['xacc']}}; --y: {{ item['device_data']['yacc']}};">
