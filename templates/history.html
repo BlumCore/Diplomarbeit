@@ -8,12 +8,6 @@
             <th>X</th>
             <th>Y</th>
             <th>Herzfrequenz</th>
-            </tr>
-            <tr class="clickable-row">
-                <td>{{ item["device_data"]["xacc"]}}</td>
-                <td>{{ item["device_data"]["yacc"]}}</td>
-                <td>{{ item["device_data"]["heartrate"]}}</td>
-            </tr>
             {% for d in old %}
             <tr class="clickable-row">
                 <td>{{ d['device_data']['xacc'] }}</td>
